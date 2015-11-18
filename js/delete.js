@@ -1,9 +1,8 @@
-var deleteButtons = document.getElementsByTagName('button');
+var deleteButtons = document.getElementsByClassName('btn btn-danger')
 
 for(var i = 0; i < deleteButtons.length; i++) {
   deleteButtons[i].addEventListener("click", function() {
-    alert("Bye Bye");
-    rowToDelete = this.parentNode.parentNode
+    var rowToDelete = this.parentNode.parentNode;
     rowToDelete.parentNode.removeChild(rowToDelete)
   }); 
 }
